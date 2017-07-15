@@ -66,9 +66,7 @@ int main (int argc, char** argv)
   ASSERT (gridSizeZ % numProcs == 0);
 #endif /* GRID_3D */
 
-#if PRINT_MESSAGE
-  printf ("Start process %d of %d\n", rank, numProcs);
-#endif /* PRINT_MESSAGE */
+  DPRINTF (LOG_LEVEL_STAGES, "Start process %d of %d\n", rank, numProcs);
 
 #ifdef GRID_1D
   GridCoordinate1D overallSize (gridSizeX);
